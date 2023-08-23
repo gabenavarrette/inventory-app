@@ -1,22 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import InventoryForm from './components/InventoryForm';
+import InventoryList from './components/InventoryList';
 
 function App() {
+  const [inventory, setInventory] = useState([]);
+
+  const handleAddItem = (newItem) => {
+    setInventory([...inventory, newItem]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Inventory App</h1>
+        <InventoryForm onAddItem={handleAddItem} />
+        <InventoryList items={inventory} />
       </header>
     </div>
   );
