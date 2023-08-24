@@ -24,6 +24,21 @@
   color: white;
 }
 
+/* InventoryForm.css */
+.label {
+  display: block; /* Ensures each label is on its own line */
+  text-align: left; /* Aligns the text to the left */
+  margin-bottom: 8px; /* Adds some spacing between labels */
+}
+
+/* InventoryForm.css */
+.success-message {
+  color: green;
+  margin-top: 8px;
+}
+
+
+
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +49,34 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* InventoryForm.css */
+.snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50; /* Green color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a raised effect */
+  animation: fade-in-out 2s ease-in-out;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
